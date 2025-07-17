@@ -20,13 +20,16 @@
       div.innerHTML = `
         <strong>${materia.nombre}</strong><br>
         <div class="detalle">
-          Código: ${materia.codigo}<br>
+          Código: ${materia.codigo || ""}<br>
           Año: ${materia.anio} | C${materia.cuatrimestre}
         </div>
       `;
+
+      // Permitir marcar como aprobada
       div.addEventListener("click", () => {
         div.classList.toggle("aprobada");
       });
+
       contenedor.appendChild(div);
     });
   }
