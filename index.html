@@ -2,30 +2,85 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Malla Rayito - Radiología IFSSA</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Malla Interactiva Rayito</title>
   <style>
-    body { font-family: Arial, sans-serif; background: #f0f0f0; text-align: center; padding: 2em; }
-    pre { background: white; padding: 1em; border-radius: 8px; text-align: left; display: inline-block; }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #5e3a87;
+    }
+    .malla {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+    }
+    .materia {
+      background-color: #d8c6f1;
+      border: 2px solid #5e3a87;
+      padding: 10px;
+      border-radius: 10px;
+      width: 180px;
+      text-align: left;
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .materia:hover {
+      transform: scale(1.05);
+    }
+    .materia.aprobada {
+      background-color: #c8e6c9;
+      text-decoration: line-through;
+    }
+    .detalle {
+      font-size: 0.9em;
+      color: #333;
+    }
   </style>
 </head>
 <body>
-  <h1>Malla de Radiología IFSSA - Rayito 💜</h1>
-  <p>A continuación se muestra tu malla personalizada:</p>
-  <pre id="contenido"></pre>
+  <h1>Malla de Radiología IFSSA - Rayito</h1>
+  <div id="malla" class="malla"></div>
 
   <script>
-    async function mostrarMalla() {
-      try {
-        const respuesta = await fetch('malla_rayito_compartida.json');
-        const datos = await respuesta.json();
-        document.getElementById('contenido').textContent = JSON.stringify(datos, null, 2);
-      } catch (error) {
-        document.getElementById('contenido').textContent = 'Error al cargar la malla 😢';
-        console.error(error);
-      }
+    const datos = JSON.parse(localStorage.getItem("mallaInteractivaDatos"));
+
+    function renderMalla(asignaturas) {
+      const contenedor = document.getElementById("malla");
+      contenedor.innerHTML = "";
+
+      asignaturas.forEach(materia => {
+        const div = document.createElement("div");
+        div.className = "materia";
+        div.innerHTML = `
+          <strong>${materia.nombre}</strong><br>
+          <div class="detalle">
+            Código: ${materia.codigo || ""}<br>
+            Año: ${materia.anio} | C${materia.cuatrimestre}<br>
+            Créditos: ${materia.creditos}
+          </div>
+        `;
+
+        // Permitir marcar como aprobada
+        div.addEventListener("click", () => {
+          div.classList.toggle("aprobada");
+        });
+
+        contenedor.appendChild(div);
+      });
     }
-    window.onload = mostrarMalla;
+
+    if (datos && datos.asignaturas) {
+      renderMalla(datos.asignaturas);
+    } else {
+      document.getElementById("malla").innerText = "No se encontraron datos de la malla.";
+    }
   </script>
 </body>
 </html>
