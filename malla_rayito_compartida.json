@@ -1,114 +1,133 @@
 {
-  "nombreCarrera": "Tecnicatura Superior en Radiología - IFSSA",
+  "nombreCarrera": "Radiología IFSSA - Rayito",
   "asignaturas": [
     {
       "codigo": "RAD-101",
       "nombre": "Anatomía y Fisiología I",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 6,
       "correlativas": []
     },
     {
       "codigo": "RAD-102",
-      "nombre": "Física Biológica",
+      "nombre": "Física biologica",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 5,
       "correlativas": []
     },
     {
       "codigo": "RAD-103",
-      "nombre": "Técnicas Radiológicas I",
-      "correlativas": []
+      "nombre": "Tecnicas Radiologicas I",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 4,
+      
     },
     {
       "codigo": "RAD-104",
-      "nombre": "Práctica I",
-      "correlativas": [
-        "RAD-101",
-        "RAD-102",
-        "RAD-103"
-      ]
+      "nombre": "Computacion",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 6,
+     
     },
     {
       "codigo": "RAD-105",
-      "nombre": "Anatomía y Fisiología II",
-      "correlativas": [
-        "RAD-101"
-      ]
+      "nombre": "Quimica Biologica",
+      "anio": 1,
+      "cuatrimestre": 2,
+      "creditos": 5,
+      
     },
     {
       "codigo": "RAD-106",
-      "nombre": "Técnicas Radiológicas II",
-      "correlativas": [
-        "RAD-103"
-      ]
-    },
-    {
-      "codigo": "RAD-107",
-      "nombre": "Computación",
-      "correlativas": []
-    },
-    {
-      "codigo": "RAD-108",
-      "nombre": "Inglés Técnico",
-      "correlativas": []
-    },
-    {
-      "codigo": "RAD-109",
-      "nombre": "Legislación",
-      "correlativas": []
-    },
-    {
-      "codigo": "RAD-110",
-      "nombre": "Taller de Simulación",
-      "correlativas": [
-        "RAD-106"
-      ]
+      "nombre": "Histologia y Embriologia",
+      "anio": 1,
+      "cuatrimestre": 2,
+      "creditos": 4,
+     
     },
     {
       "codigo": "RAD-201",
-      "nombre": "Práctica II",
-      "correlativas": [
-        "RAD-104",
-        "RAD-110"
-      ]
+      "nombre": "Anatomia y fisiologia II",
+      "anio": 2,
+      "cuatrimestre": 1,
+      "creditos": 5,
+      "correlativas": ["RAD-102"]
     },
     {
       "codigo": "RAD-202",
-      "nombre": "Clínica Radiológica",
-      "correlativas": [
-        "RAD-106"
-      ]
+      "nombre": "Procesos Radiológicos II",
+      "anio": 2,
+      "cuatrimestre": 1,
+      "creditos": 5,
+      "correlativas": ["RAD-105"]
     },
     {
       "codigo": "RAD-203",
-      "nombre": "Protección Radiológica",
-      "correlativas": [
-        "RAD-102"
-      ]
+      "nombre": "Anatommia y Fisiologia III",
+      "anio": 2,
+      "cuatrimestre": 1,
+      "creditos": 5,
+      "correlativas": ["RAD-106"]
     },
     {
       "codigo": "RAD-204",
-      "nombre": "Diagnóstico por imágenes",
-      "correlativas": [
-        "RAD-105",
-        "RAD-106"
-      ]
-    },
-    {
-      "codigo": "RAD-205",
-      "nombre": "Bioética",
+      "nombre": "Farmacologia",
+      "anio": 2,
+      "cuatrimestre": 2,
+      "creditos": 3,
       "correlativas": []
     },
     {
+      "codigo": "RAD-205",
+      "nombre": "Procesos Radiológicos III",
+      "anio": 2,
+      "cuatrimestre": 2,
+      "creditos": 5,
+      "correlativas": ["RAD-202"]
+    },
+    {
+      "codigo": "RAD-206",
+      "nombre": "Practicas I",
+      "anio": 2,
+      "cuatrimestre": 2,
+      "creditos": 5,
+      "correlativas": ["RAD-203"]
+    },
+    {
       "codigo": "RAD-301",
-      "nombre": "Práctica Final Profesionalizante",
-      "correlativas": [
-        "RAD-201"
-      ]
+      "nombre": "Diagnóstico por Imagen I",
+      "anio": 3,
+      "cuatrimestre": 1,
+      "creditos": 6,
+      "correlativas": ["RAD-205"]
     },
     {
       "codigo": "RAD-302",
-      "nombre": "Seminario Final Integrador",
-      "correlativas": [
-        "RAD-301"
-      ]
+      "nombre": "Práctica Final I",
+      "anio": 3,
+      "cuatrimestre": 1,
+      "creditos": 5,
+      "correlativas": ["RAD-206"]
+    },
+    {
+      "codigo": "RAD-303",
+      "nombre": "Diagnóstico por Imagen II",
+      "anio": 3,
+      "cuatrimestre": 2,
+      "creditos": 6,
+      "correlativas": ["RAD-301"]
+    },
+    {
+      "codigo": "RAD-304",
+      "nombre": "Práctica Final II",
+      "anio": 3,
+      "cuatrimestre": 2,
+      "creditos": 6,
+      "correlativas": ["RAD-302"]
     }
   ]
 }
