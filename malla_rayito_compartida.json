@@ -1,11 +1,53 @@
 {
-  "nombre": "Radiología - IFSSA (Rayito)",
-  "materias": [
-    { "id": 1, "nombre": "Anatomía y Fisiología I", "correlativas": [] },
-    { "id": 2, "nombre": "Técnicas Radiológicas I", "correlativas": [] },
-    { "id": 3, "nombre": "Computación", "correlativas": [] },
-    { "id": 4, "nombre": "Física Biológica", "correlativas": [] },
-    { "id": 5, "nombre": "Anatomía y Fisiología II", "correlativas": [1] },
-    { "id": 6, "nombre": "Técnicas Radiológicas II", "correlativas": [2] }
+  "nombreCarrera": "Radiología IFSSA - Rayito",
+  "asignaturas": [
+    {
+      "codigo": "RAD-101",
+      "nombre": "Anatomía y Fisiología I",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 4,
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-102",
+      "nombre": "Técnicas Radiológicas I",
+      "anio": 1,
+      "cuatrimestre": 1,
+      "creditos": 4,
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-103",
+      "nombre": "Computación",
+      "anio": 1,
+      "cuatrimestre": 2,
+      "creditos": 2,
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-104",
+      "nombre": "Física Biológica",
+      "anio": 1,
+      "cuatrimestre": 2,
+      "creditos": 3,
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-201",
+      "nombre": "Anatomía y Fisiología II",
+      "anio": 2,
+      "cuatrimestre": 1,
+      "creditos": 4,
+      "correlativas": ["RAD-101"]
+    },
+    {
+      "codigo": "RAD-202",
+      "nombre": "Técnicas Radiológicas II",
+      "anio": 2,
+      "cuatrimestre": 2,
+      "creditos": 4,
+      "correlativas": ["RAD-102"]
+    }
   ]
 }
