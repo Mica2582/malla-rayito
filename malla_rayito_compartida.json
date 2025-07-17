@@ -1,53 +1,114 @@
 {
-  "nombreCarrera": "Radiología IFSSA - Rayito",
+  "nombreCarrera": "Tecnicatura Superior en Radiología - IFSSA",
   "asignaturas": [
     {
-
+      "codigo": "RAD-101",
       "nombre": "Anatomía y Fisiología I",
-      "anio": 1,
-      "cuatrimestre": 1,
-      "creditos": 4,
       "correlativas": []
     },
     {
-     
-      "nombre": "Técnicas Radiológicas I",
-      "anio": 1,
-      "cuatrimestre": 1,
-      "creditos": 4,
-      "correlativas": []
-    },
-    {
-     
-      "nombre": "Computación",
-      "anio": 1,
-      "cuatrimestre": 2,
-      "creditos": 2,
-      "correlativas": []
-    },
-    {
-     
+      "codigo": "RAD-102",
       "nombre": "Física Biológica",
-      "anio": 1,
-      "cuatrimestre": 2,
-      "creditos": 3,
       "correlativas": []
     },
     {
-     
-      "nombre": "Anatomía y Fisiología II",
-      "anio": 2,
-      "cuatrimestre": 1,
-      "creditos": 4,
-      "correlativas": ["RAD-101"]
+      "codigo": "RAD-103",
+      "nombre": "Técnicas Radiológicas I",
+      "correlativas": []
     },
     {
-     
+      "codigo": "RAD-104",
+      "nombre": "Práctica I",
+      "correlativas": [
+        "RAD-101",
+        "RAD-102",
+        "RAD-103"
+      ]
+    },
+    {
+      "codigo": "RAD-105",
+      "nombre": "Anatomía y Fisiología II",
+      "correlativas": [
+        "RAD-101"
+      ]
+    },
+    {
+      "codigo": "RAD-106",
       "nombre": "Técnicas Radiológicas II",
-      "anio": 2,
-      "cuatrimestre": 2,
-      "creditos": 4,
-      "correlativas": ["RAD-102"]
+      "correlativas": [
+        "RAD-103"
+      ]
+    },
+    {
+      "codigo": "RAD-107",
+      "nombre": "Computación",
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-108",
+      "nombre": "Inglés Técnico",
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-109",
+      "nombre": "Legislación",
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-110",
+      "nombre": "Taller de Simulación",
+      "correlativas": [
+        "RAD-106"
+      ]
+    },
+    {
+      "codigo": "RAD-201",
+      "nombre": "Práctica II",
+      "correlativas": [
+        "RAD-104",
+        "RAD-110"
+      ]
+    },
+    {
+      "codigo": "RAD-202",
+      "nombre": "Clínica Radiológica",
+      "correlativas": [
+        "RAD-106"
+      ]
+    },
+    {
+      "codigo": "RAD-203",
+      "nombre": "Protección Radiológica",
+      "correlativas": [
+        "RAD-102"
+      ]
+    },
+    {
+      "codigo": "RAD-204",
+      "nombre": "Diagnóstico por imágenes",
+      "correlativas": [
+        "RAD-105",
+        "RAD-106"
+      ]
+    },
+    {
+      "codigo": "RAD-205",
+      "nombre": "Bioética",
+      "correlativas": []
+    },
+    {
+      "codigo": "RAD-301",
+      "nombre": "Práctica Final Profesionalizante",
+      "correlativas": [
+        "RAD-201"
+      ]
+    },
+    {
+      "codigo": "RAD-302",
+      "nombre": "Seminario Final Integrador",
+      "correlativas": [
+        "RAD-301"
+      ]
     }
   ]
 }
