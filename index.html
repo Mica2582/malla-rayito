@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Rayito - Radiología IFSSA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body { font-family: Arial, sans-serif; background: #f0f0f0; text-align: center; padding: 2em; }
+    pre { background: white; padding: 1em; border-radius: 8px; text-align: left; display: inline-block; }
+  </style>
+</head>
+<body>
+  <h1>Malla de Radiología IFSSA - Rayito 💜</h1>
+  <p>A continuación se muestra tu malla personalizada:</p>
+  <pre id="contenido"></pre>
+
+  <script>
+    async function mostrarMalla() {
+      try {
+        const respuesta = await fetch('malla_rayito_compartida.json');
+        const datos = await respuesta.json();
+        document.getElementById('contenido').textContent = JSON.stringify(datos, null, 2);
+      } catch (error) {
+        document.getElementById('contenido').textContent = 'Error al cargar la malla 😢';
+        console.error(error);
+      }
+    }
+    window.onload = mostrarMalla;
+  </script>
+</body>
+</html>
